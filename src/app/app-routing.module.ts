@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DinamicScriptsGuard } from './guards/dinamic-scripts.guard';
 
 const routes: Routes = [
   {
     path: 'inicio',
+    canLoad: [DinamicScriptsGuard],
+    canActivate: [DinamicScriptsGuard],
     loadChildren: () =>
       import('./inicio/inicio.module').then((m) => m.InicioModule),
   },
