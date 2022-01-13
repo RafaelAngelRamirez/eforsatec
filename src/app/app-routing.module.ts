@@ -21,6 +21,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./productos/productos.module').then((m) => m.ProductosModule),
   },
+
+  {
+    path: '**',
+    pathMatch:"full",
+    redirectTo:"/inicio"
+  }
 ];
 
 @NgModule({
