@@ -6,11 +6,11 @@ const fs = require('fs')
 const app = express()
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist'))
+app.use(express.static(__dirname + '/dist/eforsatec'))
 
 // app.all('/env.js', (req, res) =>
 // {
-//     let buffer = fs.readFileSync('./dist/env.prod.js', 'utf-8').split('\n')
+//     let buffer = fs.readFileSync('./dist/eforsatec/env.prod.js', 'utf-8').split('\n')
 
 //     //Obtener variables escritas
 //     const plantilla = 'window.__env.'
@@ -34,7 +34,7 @@ app.use(express.static(__dirname + '/dist'))
 // })
 
 app.get('/*', (req, res) =>
-    res.sendFile(path.join(__dirname + '/dist/index.html'))
+    res.sendFile(path.join(__dirname + '/dist/eforsatec/index.html'))
 )
 
 // Start the app by listening on the default Heroku port
