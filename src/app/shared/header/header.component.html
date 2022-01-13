@@ -20,20 +20,38 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html"
-              >Home
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="['/inicio']"
+              routerLinkActive="active"
+              >Inicio
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="products.html">Our Products</a>
+            <a
+              class="nav-link"
+              [routerLink]="['/productos']"
+              routerLinkActive="active"
+              >Nuestros productos</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
+            <a
+              class="nav-link"
+              [routerLink]="['/nosotros']"
+              routerLinkActive="active"
+              >Nosotros</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
+            <a
+              class="nav-link"
+              [routerLink]="['/contacto']"
+              routerLinkActive="active"
+              >Contactanos</a
+            >
           </li>
         </ul>
       </div>
